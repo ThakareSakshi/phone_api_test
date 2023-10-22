@@ -20,12 +20,17 @@ async function default_mobiles() {
         card.innerHTML = `<img src="${element.image}" alt="">
     <h2>${element.phone_name}</h2>
     <p>Lorem ipsum dolor sit amet, consectetur  vel</p>
-    <button class="show_detail_btn">show details</button>`
+    <button class="show_detail_btn" onClick=showDetails("${element.slug}")>show details</button>`
 
         phone_container.appendChild(card);
 
     });
 
+}
+async function showDetails(slug) {
+    let details = await fetch("https://openapi.programming-hero.com/api/phone/" + slug);
+    let detailsInfo = await details.json();
+    console.log(detailsInfo)
 }
 
 
@@ -39,25 +44,54 @@ async function logPhones() {
         card.innerHTML = `<img src="${element.image}" alt="">
     <h2>${element.phone_name}</h2>
     <p>Lorem ipsum dolor sit amet, consectetur  vel</p>
-    <button class="show_detail_btn">show details</button>`
+    <button class="show_detail_btn" onClick=showDetails("${element.slug}")>show details</button>`
 
         new_container.appendChild(card);
 
-      
 
-  
+
+
 
     });
     phone_container.innerHTML = new_container.innerHTML
-    
+
 
 
 }
 
-let cards=document.querySelectorAll(".card")
-cards.forEach((c)=>{
-    console.log(c);
+async function showDetails(slug) {
+    let details = await fetch("https://openapi.programming-hero.com/api/phone/" + slug);
+    let detailsInfo = await details.json();
+    addDetailsToContainer(detailsInfo.data);
+}
+
+function addDetailsToContainer(data) {
+    console.log(data);
+    let dialog = document.querySelector("dialog");
+    dialog.innerHTML = `<img src="${data.image}" alt="">
+   <h2>${data.name}</h2>
+   <p>Brand :${data.brand}<p>
+   
+   <p class="phone_name">Stoarage :${data.mainFeatures.storage} </p>
+   <p>Display : ${data.mainFeatures.displaySize}</p>
+   <p>Chipset : ${data.mainFeatures.chipSet}</p>
+<span>Memory : ${data.mainFeatures.memory}</span>
+<span>release date</span>
+<button id="close">close<button>`
+
+    dialog.show();
+const close_btn=document.querySelector("#close")
+close_btn.addEventListener("click",()=>{
+    dialog.close();
 })
+
+}
+
+
+
+
+
+
 
 
 
