@@ -68,6 +68,7 @@ async function showDetails(slug) {
 function addDetailsToContainer(data) {
     console.log(data);
     let dialog = document.querySelector("dialog");
+    let dialog_container=document.querySelector(".dialog_container")
     dialog.innerHTML = `<img src="${data.image}" alt="">
    <h2>${data.name}</h2>
    <p>Brand :${data.brand}<p>
@@ -75,14 +76,16 @@ function addDetailsToContainer(data) {
    <p class="phone_name">Stoarage :${data.mainFeatures.storage} </p>
    <p>Display : ${data.mainFeatures.displaySize}</p>
    <p>Chipset : ${data.mainFeatures.chipSet}</p>
-<span>Memory : ${data.mainFeatures.memory}</span>
-<span>release date</span>
-<button id="close">close<button>`
+   <span>Memory : ${data.mainFeatures.memory}</span>
+   <span>release date</span>
+   <br>
+     <button id="close">close</button>`
 
-    dialog.show();
-const close_btn=document.querySelector("#close")
+   dialog_container.style.display="block";
+ let close_btn=document.querySelector("#close")
 close_btn.addEventListener("click",()=>{
-    dialog.close();
+    console.log("closed")
+    dialog_container.style.display="none";
 })
 
 }
