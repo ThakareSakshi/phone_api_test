@@ -29,6 +29,7 @@ button{
     outline: none;
     margin:20px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 section{
     text-align: center;
@@ -133,6 +134,11 @@ img{
 }
 .card img{
     flex-shrink: 1;
+}
+.show_all_cards{
+    display: none;
+    flex-wrap: wrap;
+
 }
 
 @media  screen and (max-width:940px) {
