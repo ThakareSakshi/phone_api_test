@@ -19,7 +19,7 @@ async function default_mobiles() {
         card.setAttribute("class", "card");
         card.innerHTML = `<img src="${element.image}" alt="">
     <h2>${element.phone_name}</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur  vel</p>
+    <p>There are many variations of passages of available, but the majority have suffered</p>
     <button class="show_detail_btn" onClick=showDetails("${element.slug}")>show details</button>`
 
         phone_container.appendChild(card);
@@ -43,7 +43,7 @@ async function logPhones() {
         card.setAttribute("class", "card");
         card.innerHTML = `<img src="${element.image}" alt="">
     <h2>${element.phone_name}</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur  vel</p>
+    <p>There are many variations of passages of available, but the majority have suffered</p>
     <button class="show_detail_btn" onClick=showDetails("${element.slug}")>show details</button>`
 
         new_container.appendChild(card);

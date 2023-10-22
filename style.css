@@ -59,6 +59,10 @@ footer h1{
 input{
     padding:10px;
     border-radius: 10px;
+    background-color: transparent;
+    color:white;
+    border:1px solid rgb(114, 112, 112);
+    outline: none;
 }
 
 .card{
