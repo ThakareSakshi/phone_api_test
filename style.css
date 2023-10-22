@@ -1,0 +1,90 @@
+*{
+     margin:0;
+      padding:0;
+      box-sizing:border-box;
+}
+
+body
+{
+    background-color: rgb(40, 39, 39);
+    color:grey;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:30px;
+    font-size: 20px;
+}
+button{
+    padding:10px 20px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color:white;
+    border:none;
+    outline: none;
+}
+section{
+    text-align: center;
+    padding:40px;
+
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 700px;
+}
+p{
+    margin:15px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(135, 133, 133);
+    color:black;
+}
+footer h1{
+    font-size: 70px;
+    font-weight: 900px;
+    padding:40px;
+}
+
+input{
+    padding:10px;
+    border-radius: 10px;
+}
+
+.card{
+    padding:50px;
+    margin:10px;
+    text-align: center;
+    box-shadow: 0px 5px 6px rgb(31, 31, 31);
+    max-width: 30%;
+    border-radius: 20px;
+}
+.phones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    padding:50px 10px;
+}
+.show_card{
+   position: fixed;
+   top:0;
+   left:0;
+    display:flex;
+    background-color: rgba(0, 0, 0, 0.601);
+    height:100vh;
+    width:100vw;
+    justify-content: center;
+   
+    
+}
+.card_detail{
+    padding:40px;
+    box-shadow: 0px 0px 5px rgb(30, 30, 30);
+    background-color: black;
+    color:white;
+    width: 40%;
+}
